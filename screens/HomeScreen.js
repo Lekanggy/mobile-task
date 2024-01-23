@@ -1,4 +1,4 @@
-import { View, Text, Image, TouchableOpacity } from 'react-native'
+import { View, Text, Image, TouchableOpacity, Pressable } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import Camera from '../assets/camera.svg'
@@ -6,6 +6,7 @@ import Profile from '../assets/profile.svg'
 import People from '../assets/people.svg'
 import Shield from '../assets/shield.svg'
 import Arrow from '../assets/arrow-right.svg'
+import { Host, Portal } from 'react-native-portalize';
 
 const HomeScreen = () => {
   return (
@@ -17,9 +18,9 @@ const HomeScreen = () => {
           }
             className="h-28 w-28"
           />
-          <View className="h-10 w-10 rounded-full absolute bg-[#047CFF] items-center justify-center right-[145px] bottom-[60px]">
+          <Pressable className="h-10 w-10 rounded-full absolute bg-[#047CFF] items-center justify-center right-[145px] bottom-[60px]">
             <Camera width={20} height={20} className="h-full w-full"/>
-          </View>
+          </Pressable>
           <Text className="text-[#333] text-lg font-medium pt-4">Miriam de Jesús</Text>
           <Text className="text-[#B3B3B3] text-sm">h.mariano@gmail.com</Text>
         </View>
@@ -41,6 +42,9 @@ const HomeScreen = () => {
          </TouchableOpacity>
         </View>
       </View>
+     
+       
+
     </SafeAreaView>
   )
 }
