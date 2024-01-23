@@ -1,0 +1,1 @@
+import { SvgXml } from "react-native-svg";
